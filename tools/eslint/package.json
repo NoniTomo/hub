@@ -1,0 +1,65 @@
+{
+  "name": "@nonitomo/eslint",
+  "license": "MIT",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "eslint config",
+  "keywords": [
+    "eslint",
+    "formatter"
+  ],
+  "author": {
+    "name": "NoniTomo",
+    "url": "https://github.com/NoniTomo/hub"
+  },
+  "repository": {
+    "url": "https://github.com/NoniTomo/hub"
+  },
+  "bugs": {
+    "url": "https://github.com/NoniTomo/hub/issues"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.mts",
+        "default": "./dist/esm/index.mjs"
+      },
+      "require": {
+        "types": "./dist/esm/index.d.mts",
+        "default": "./dist/esm/index.mjs"
+      }
+    }
+  },
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/esm/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepublishOnly": "pnpm type && pnpm build",
+    "build": "tsdown",
+    "lint": "eslint . --fix",
+    "lint-inspector": "npx @eslint/config-inspector",
+    "type": "tsc --noEmit",
+    "format": "prettier --write .",
+    "pretty": "pnpm type && pnpm lint && pnpm format"
+  },
+  "peerDependencies": {
+    "oxfmt": "^0.78.0",
+    "@antfu/eslint-config": "10.0.0",
+    "@eslint-react/eslint-plugin": "5.28.8",
+    "eslint": "10.14.0",
+    "eslint-flat-config-utils": "3.2.0"
+  },
+  "dependencies": {
+    "oxfmt": "^0.78.0"
+  },
+  "devDependencies": {
+    "@nonitomo/eslint": "2.19.1",
+    "@nonitomo/tsconfig": "1.2.0"
+  }
+}

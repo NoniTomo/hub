@@ -1,0 +1,33 @@
+{
+  "name": "@nonitomo/tsconfig",
+  "license": "MIT",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "typescript config",
+  "keywords": [
+    "oxfmt",
+    "formatter"
+  ],
+  "author": {
+    "name": "NoniTomo",
+    "url": "https://github.com/NoniTomo/hub"
+  },
+  "repository": {
+    "url": "https://github.com/NoniTomo/hub"
+  },
+  "bugs": {
+    "url": "https://github.com/NoniTomo/hub/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "tsconfig.base.json",
+    "tsconfig.bundler.json",
+    "tsconfig.react.json",
+    "tsconfig.node.json"
+  ],
+  "peerDependencies": {
+    "typescript": "^6"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "nonitomo-hub",
+  "license": "MIT",
+  "type": "module",
+  "version": "1.0.0",
+  "keywords": [
+    "oxfmt",
+    "eslint",
+    "tsconfig"
+  ],
+  "private": true,
+  "description": "nonitomo",
+  "author": {
+    "name": "NoniTomo",
+    "url": "https://github.com/NoniTomo/hub"
+  },
+  "bugs": {
+    "url": "https://github.com/NoniTomo/hub/issues"
+  },
+  "workspaces": [
+    "tools/*"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm -r run dev",
+    "build": "pnpm -r run build",
+    "deploy": "pnpm -r run deploy",
+    "lint": "pnpm -r run lint",
+    "format": "pnpm -r run format"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6",
+    "shx": "0.4.0",
+    "tsdown": "^0.22.14",
+    "typescript": "^6.0.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "handlebars": "4.7.9"
+    }
+  }
+}
