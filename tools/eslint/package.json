@@ -59,6 +59,6 @@
   "devDependencies": {
     "@nonitomo/eslint": "0.0.1",
     "@nonitomo/oxfmt": "0.0.1",
-    "@nonitomo/tsconfig": "0.0.1"
+    "@nonitomo/tsconfig": "0.0.2"
   }
 }
