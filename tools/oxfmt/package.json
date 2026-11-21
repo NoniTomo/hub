@@ -2,7 +2,7 @@
   "name": "@nonitomo/oxfmt",
   "license": "MIT",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "oxfmt config",
   "keywords": [
     "oxfmt",
@@ -54,7 +54,7 @@
     "oxfmt": "^0.78.0"
   },
   "devDependencies": {
-    "@nonitomo/eslint": "2.19.1",
-    "@nonitomo/tsconfig": "1.2.0"
+    "@nonitomo/eslint": "0.0.1",
+    "@nonitomo/tsconfig": "0.0.1"
   }
 }
