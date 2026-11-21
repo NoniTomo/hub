@@ -1,23 +1,23 @@
 {
   "name": "@nonitomo/oxfmt",
-  "license": "MIT",
   "type": "module",
   "version": "0.0.1",
   "description": "oxfmt config",
-  "keywords": [
-    "oxfmt",
-    "formatter"
-  ],
   "author": {
     "name": "NoniTomo",
     "url": "https://github.com/NoniTomo/hub"
   },
+  "license": "MIT",
   "repository": {
     "url": "https://github.com/NoniTomo/hub"
   },
   "bugs": {
     "url": "https://github.com/NoniTomo/hub/issues"
   },
+  "keywords": [
+    "oxfmt",
+    "formatter"
+  ],
   "exports": {
     ".": {
       "import": {
@@ -42,6 +42,8 @@
   "scripts": {
     "prepublishOnly": "pnpm type && pnpm build",
     "build": "tsdown",
+    "lint": "eslint . --fix",
+    "lint-inspector": "npx @eslint/config-inspector",
     "type": "tsc --noEmit",
     "format": "oxfmt",
     "pretty": "pnpm type && pnpm lint && pnpm format"
@@ -53,6 +55,7 @@
     "oxfmt": "^0.78.0"
   },
   "devDependencies": {
+    "@nonitomo/eslint": "0.0.1",
     "@nonitomo/tsconfig": "0.0.1"
   }
 }
