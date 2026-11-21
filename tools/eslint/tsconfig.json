@@ -4,5 +4,5 @@
     "target": "ESNext"
   },
   "include": ["src"],
-  "exclude": ["dist", "node_modules", "*.config.js", "*.config.ts"]
+  "exclude": ["dist", "node_modules"]
 }
