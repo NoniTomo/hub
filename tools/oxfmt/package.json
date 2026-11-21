@@ -42,7 +42,6 @@
   "scripts": {
     "prepublishOnly": "pnpm type && pnpm build",
     "build": "tsdown",
-    "lint": "eslint . --fix",
     "type": "tsc --noEmit",
     "format": "oxfmt",
     "pretty": "pnpm type && pnpm lint && pnpm format"
@@ -54,7 +53,6 @@
     "oxfmt": "^0.78.0"
   },
   "devDependencies": {
-    "@nonitomo/eslint": "0.0.1",
     "@nonitomo/tsconfig": "0.0.1"
   }
 }
