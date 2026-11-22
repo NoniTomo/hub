@@ -1,0 +1,5 @@
+packages:
+  - "tools/*"
+publicHoistPattern:
+  - eslint
+  - oxfmt
