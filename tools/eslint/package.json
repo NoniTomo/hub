@@ -45,7 +45,7 @@
     "lint": "eslint . --fix",
     "lint-inspector": "npx @eslint/config-inspector",
     "type": "tsc --noEmit",
-    "format": "prettier --write .",
+    "format": "oxfmt",
     "pretty": "pnpm type && pnpm lint && pnpm format"
   },
   "dependencies": {

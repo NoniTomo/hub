@@ -1,8 +1,9 @@
 {
   "extends": "@nonitomo/tsconfig/tsconfig.bundler.json",
   "compilerOptions": {
-    "target": "ESNext"
+    "target": "ESNext",
+    "allowImportingTsExtensions": true
   },
-  "include": ["src"],
+  "include": ["src", "./*.config.ts"],
   "exclude": ["dist", "node_modules"]
 }

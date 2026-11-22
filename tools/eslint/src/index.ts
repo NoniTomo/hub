@@ -2,33 +2,33 @@ import type {
   Awaitable,
   OptionsConfig,
   OptionsTypescript,
-  TypedFlatConfigItem,
-} from '@antfu/eslint-config'
-import type { Linter } from 'eslint'
+  TypedFlatConfigItem
+} from '@antfu/eslint-config';
+import type { Linter } from 'eslint';
 
-import antfu from '@antfu/eslint-config'
+import antfu from '@antfu/eslint-config';
 
-type EslintOptions = OptionsConfig
-  & TypedFlatConfigItem & {
-    typescript?: boolean | 'engine' | OptionsTypescript
-  }
+type EslintOptions = OptionsConfig &
+  TypedFlatConfigItem & {
+    typescript?: boolean | 'engine' | OptionsTypescript;
+  };
 
 type Eslint = (
   options?: EslintOptions,
   ...userConfigs: Awaitable<Linter.Config[] | TypedFlatConfigItem | TypedFlatConfigItem[]>[]
-) => Promise<Linter.Config[]>
+) => Promise<Linter.Config[]>;
 
 export const eslint: Eslint = async (inputOptions = {}, ...configs) => {
-  const { typescript = false, ...options } = inputOptions
+  const { typescript = false, ...options } = inputOptions;
 
   return antfu(
     {
       ...options,
       ...(typescript === 'engine'
         ? {
-            typescript: { tsconfigPath: './tsconfig.json' },
+            typescript: { tsconfigPath: './tsconfig.json' }
           }
-        : { typescript }),
+        : { typescript })
     },
     {
       name: 'nonitomo/rewrite',
@@ -53,8 +53,8 @@ export const eslint: Eslint = async (inputOptions = {}, ...configs) => {
         'react-hooks/exhaustive-deps': 'off',
         'react-refresh/only-export-components': 'off',
 
-        'test/prefer-lowercase-title': 'off',
-      },
+        'test/prefer-lowercase-title': 'off'
+      }
     },
     {
       name: 'nonitomo/sort',
@@ -63,8 +63,8 @@ export const eslint: Eslint = async (inputOptions = {}, ...configs) => {
           'error',
           {
             order: 'asc',
-            type: 'alphabetical',
-          },
+            type: 'alphabetical'
+          }
         ],
         'perfectionist/sort-imports': [
           'error',
@@ -80,26 +80,21 @@ export const eslint: Eslint = async (inputOptions = {}, ...configs) => {
               'side-effect',
               'side-effect-style',
               'ts-equals-import',
-              'unknown',
+              'unknown'
             ],
             internalPattern: ['^~/.+', '^@/.+'],
             newlinesBetween: 1,
             order: 'asc',
-            type: 'natural',
-          },
+            type: 'natural'
+          }
         ],
         'perfectionist/sort-interfaces': [
           'error',
           {
-            groups: [
-              'property',
-              'member',
-              'method',
-              'index-signature',
-            ],
+            groups: ['property', 'member', 'method', 'index-signature'],
             order: 'asc',
-            type: 'alphabetical',
-          },
+            type: 'alphabetical'
+          }
         ],
         'perfectionist/sort-jsx-props': [
           'error',
@@ -107,23 +102,17 @@ export const eslint: Eslint = async (inputOptions = {}, ...configs) => {
             customGroups: [
               {
                 groupName: 'reserved',
-                elementNamePattern: '^(key|ref)$',
+                elementNamePattern: '^(key|ref)$'
               },
               {
                 groupName: 'callback',
-                elementNamePattern: '^on[A-Z].*',
-              },
+                elementNamePattern: '^on[A-Z].*'
+              }
             ],
-            groups: [
-              'shorthand-prop',
-              'reserved',
-              'multiline-prop',
-              'unknown',
-              'callback',
-            ],
+            groups: ['shorthand-prop', 'reserved', 'multiline-prop', 'unknown', 'callback'],
             order: 'asc',
-            type: 'alphabetical',
-          },
+            type: 'alphabetical'
+          }
         ],
         'perfectionist/sort-union-types': [
           'error',
@@ -140,15 +129,15 @@ export const eslint: Eslint = async (inputOptions = {}, ...configs) => {
               'operator',
               'tuple',
               'union',
-              'nullish',
+              'nullish'
             ],
             order: 'asc',
             specialCharacters: 'keep',
-            type: 'alphabetical',
-          },
-        ],
-      },
+            type: 'alphabetical'
+          }
+        ]
+      }
     },
-    ...configs,
-  )
-}
+    ...configs
+  );
+};
