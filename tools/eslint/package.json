@@ -1,7 +1,7 @@
 {
   "name": "@nonitomo/eslint",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "eslint config",
   "author": {
     "name": "NoniTomo",
@@ -57,8 +57,8 @@
     "oxfmt": "^0.78.0"
   },
   "devDependencies": {
-    "@nonitomo/eslint": "0.0.1",
-    "@nonitomo/oxfmt": "0.0.1",
+    "@nonitomo/eslint": "0.0.2",
+    "@nonitomo/oxfmt": "0.0.2",
     "@nonitomo/tsconfig": "0.0.2"
   }
 }
